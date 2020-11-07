@@ -25,12 +25,23 @@
     <script>
       $(function(){
         // セレクタ.メソッド
-        // セレクタ → $("")
-        //   指定要素 -> html 要素 p h1 ul
-        // id -> #main
-        // class -> .item
-        // $("#sub").css('color', 'red');
-        $(".item").css('color', 'red');
+        // # .
+        // > 直下の子要素
+        //  (空白)それ以下の要素
+        // , 複数の要素
+        // + 隣接する要素
+
+        // main の直下の item のみ指定
+        // $("#main > .item").css('color', 'red');
+        
+        // 空白 -> main 以下
+        // $("#main .item").css('color', 'red');
+
+        // 複数の要素
+        // $("p, .item").css('color', 'red');
+
+        // 隣接する要素 隣のみ
+        $(".item + .item").css('color', 'red');
       });
     </script>
   </body>
