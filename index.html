@@ -25,21 +25,23 @@
     <script>
       $(function(){
         // セレクタ.メソッド
-        // # フィルタ
-        // sub の子要素内 の ilタグをフィルタで選ぶ
-        // $("#sub > li").css('color', 'red');
+        // メソッドを使った DOM 要素の指定
 
-        // sub の子要素内 の ilタグ の 3番目をフィルタで選ぶ
-        // $("#sub > li:eq(2)").css('color', 'red');
+        // parent(), children() → 親要素、子要素
+        // next(), prev() → 前、あと
+        // siblings() - 兄弟要素
 
-        // li:gt(), li:lt()
-        // 1より 大きい(3-2, 3-3, 3-4) lt 小さい
-        // $("#sub > li:gt(1)").css('color', 'red');
-        // li:odd, li:even 奇数偶数
-        // :containes 要素の中身に含まれる
-        // $("#sub > li:contains('4')").css('color', 'red');
-        // :first, :last 最初、最後
+        // ある要素の親要素
+        // $("#sub").parent().css('color', 'red');
 
+        // 3番目 の次 3-3 を指定
+        // $("#sub > li:eq(2)").next().css('color', 'red');
+
+        // 3番目 の前 3-1 を指定
+        // $("#sub > li:eq(2)").prev().css('color', 'red');
+
+        // 同列のすべての要素
+        $("#sub > li:eq(2)").siblings().css('color', 'red');
       });
     </script>
   </body>
