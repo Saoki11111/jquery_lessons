@@ -7,21 +7,22 @@
   <body>
     <p>jQueryの練習</p>
     <a href="http://google.com" data-sitename="google">google</a>
+    <input type="text" value="hello">
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
       $(function(){
-        // attr HTML の属性の値を取得、変更できる
-        // consolelog -> http://google.com 
-        // console.log($('a').attr('href'));
+        // text
+        // html
+        // $('p').html('<a href="">click me!</a>');
 
-        // href 属性の変更
-        // console.log($('a').attr('href', 'http://google.co.jp'));
+        // val
+        // console.log($('input').val());
+        // $('input').val('hello, again!');
 
-        // data
-        // カスタム属性
-        console.log($('a').data('sitename'));
-
+        // remove(子要素のみ), empty(要素削除)
+        // $('p').empty();
+        $('p').remove();
       });
     </script>
   </body>
