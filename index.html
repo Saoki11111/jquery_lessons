@@ -6,23 +6,29 @@
   </head>
   <body>
     <p>jQueryの練習</p>
-    <a href="http://google.com" data-sitename="google">google</a>
-    <input type="text" value="hello">
+    <div id="box" style="width: 100px; height: 100px; background: red;"></div>
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
       $(function(){
-        // text
-        // html
-        // $('p').html('<a href="">click me!</a>');
+        // hide, show
+        // スピード
+        // $('#box').hide('slow');
+        // $('#box').hide('800');
+        // $('#box').fadeOut('800');
+        // トグル
+        // $('#box').toggle('800');
+        // $('#box').toggle('800');
+        // $('#box').toggle('800');
+        // $('#box').toggle('800');
 
-        // val
-        // console.log($('input').val());
-        // $('input').val('hello, again!');
+        // fadeOut, fadeIn
+        // toggle
+        // alert
+        $('#box').fadeOut('800', function() {
+          alert("gone!")
+        });
 
-        // remove(子要素のみ), empty(要素削除)
-        // $('p').empty();
-        $('p').remove();
       });
     </script>
   </body>
