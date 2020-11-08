@@ -3,24 +3,29 @@
   <head>
     <meta charset="UTF-8">
     <title>jQueryの練習</title>
+    <style>
+      .myStyle {
+        border: 5px solid green;
+        font-size: 48px;
+      }
+    </style>
   </head>
   <body>
     <p>jQueryの練習</p>
-    <p><a href="http://google.com">Google</a></p>
-    <p><a href="http://yahoo.jp">Yahoo</a></p>
-    <p><a href="http://dotinstall.com">Dotinstall</a></p>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
       $(function(){
         // セレクタ.メソッド
-        // 属性セレクタ
-        // $('a[href="http://google.com"]').css('background', 'red');
-        // google 以外
-        // $('a[href!="http://google.com"]').css('background', 'red');
-        // dotinstall が含まれるもの 
-        // $('a[href*="dotinstall"]').css('background', 'red');
-        // jp で終わるもの 
-        $('a[href$="jp"]').css('background', 'red');
+        // .css メソッドチェーン
+        // $('p').css('color', 'red').css('background', 'blue');
+
+        // p 要素の設定されている色を知る
+        // $('p').css('color', 'red').css('background', 'blue');
+        // $('p').css('color');
+
+        // addClass removeClass
+        // class 追加 -> <p class="myStyle">
+        $('p').addClass('myStyle');
       });
     </script>
   </body>
