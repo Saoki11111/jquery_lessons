@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <title>jQueryの練習</title>
 
-    <button>もっと読む</button>
   </head>
   <body>
     <p>jQueryの練習</p>
+
+    <p>
+      <input type="text" name="name" id="name">
+      <input type="button" id="greet" value="Greet!">
+    </p>
     <div id="result"></div>
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -16,11 +20,21 @@
         // Ajax
         // Asynchronus JavaScript + XML
         // サーバーと通信 + ページの書き換え
+        // 非同期: 処理が終わる前に次の処理に移る
+        // パラメーターを渡す場合
+        // $.get
+        // $.post
 
-        // 再読込されず more.html が表示される
-        $('button').click(function() {
-          $('#result').load('more.html');
+        $('#greet').click(function() {
+
+          $.get('greet.php', {
+            name: $('#name').val()
+          }, function(data) {
+            $('#result').html(data.message + '(' + data.length + ')' );
+          });
+
         });
+
       });
     </script>
   </body>
