@@ -3,28 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <title>jQueryの練習</title>
-    <button>Add!</button>
+
+    <button>もっと読む</button>
   </head>
   <body>
     <p>jQueryの練習</p>
+    <div id="result"></div>
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
       $(function(){
+        // Ajax
+        // Asynchronus JavaScript + XML
+        // サーバーと通信 + ページの書き換え
 
+        // 再読込されず more.html が表示される
         $('button').click(function() {
-          var p = $('<p>').text('vanish!').addClass('vanish');
-          $(this).before(p);
+          $('#result').load('more.html');
         });
-
-        // $('.vanish').click(function() {
-        //   $(this).remove();
-        // });
-
-        $('body').on('click', '.vanish', function() {
-          $(this).remove();
-        });
-
       });
     </script>
   </body>
