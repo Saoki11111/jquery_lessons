@@ -3,29 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <title>jQueryの練習</title>
-    <style>
-      .myStyle {
-        border: 5px solid green;
-        font-size: 48px;
-      }
-    </style>
   </head>
   <body>
     <p>jQueryの練習</p>
+    <a href="http://google.com" data-sitename="google">google</a>
+
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
       $(function(){
-        // セレクタ.メソッド
-        // .css メソッドチェーン
-        // $('p').css('color', 'red').css('background', 'blue');
+        // attr HTML の属性の値を取得、変更できる
+        // consolelog -> http://google.com 
+        // console.log($('a').attr('href'));
 
-        // p 要素の設定されている色を知る
-        // $('p').css('color', 'red').css('background', 'blue');
-        // $('p').css('color');
+        // href 属性の変更
+        // console.log($('a').attr('href', 'http://google.co.jp'));
 
-        // addClass removeClass
-        // class 追加 -> <p class="myStyle">
-        $('p').addClass('myStyle');
+        // data
+        // カスタム属性
+        console.log($('a').data('sitename'));
+
       });
     </script>
   </body>
